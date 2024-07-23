@@ -1,0 +1,42 @@
+﻿<Window x:Class="GRailwayReservationSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GRailwayReservationSystem"
+        mc:Ignorable="d"
+        Title="Railway Reservation" Height="500" Width="600">
+    <Window.Background>
+        <ImageBrush ImageSource="train.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="German Railway Reservation System" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="20"/>
+        <Border Grid.Row="1" Background="AliceBlue" CornerRadius="10" BorderThickness="2" BorderBrush="Black" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+                <Image Source="logo.jpg" Height="150" Width="150" HorizontalAlignment="Center" Margin="20"/>
+                <TextBlock Text="Passenger Name:" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <TextBox x:Name="txtPassengerName" Margin="10,5,10,5" Width="300"/>
+                <TextBlock Text="Train Number:" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <TextBox x:Name="txtTrainNumber" Margin="10,5,10,5" Width="300"/>
+                <TextBlock Text="Source Station:" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <TextBox x:Name="txtSourceStation" Margin="10,5,10,5" Width="300"/>
+                <TextBlock Text="Destination Station:" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <TextBox x:Name="txtDestinationStation" Margin="10,5,10,5" Width="300"/>
+                <TextBlock Text="Date of Journey:" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <DatePicker x:Name="dpjourneyDate" Margin="10,5,10,5" Width="300"/>
+                <TextBlock Text="Class" Margin="10,5,10,5" FontSize="16" Foreground="DarkRed"/>
+                <ComboBox x:Name="classstyle" Margin="10,5,10,5">
+                    <ComboBoxItem Content ="First Class"/>
+                    <ComboBoxItem Content ="Second Class"/>
+                    <ComboBoxItem Content ="Third Class"/>
+                    <ComboBoxItem Content ="Sleeper"/>
+                </ComboBox>
+                <Button Content ="Book Ticket" Width="200" Height ="30" HorizontalAlignment="Center" Margin="10,5,10,5"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window> 
